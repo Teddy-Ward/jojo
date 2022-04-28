@@ -1,95 +1,12 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;800&display=swap');
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* end of reset */
-* {
-    font-family: var(--fonts);
-    font-weight: 400;
-    margin: 0;
-    padding: 0;
-    background-color: none;
-
-}
-  
-html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
- 
-body {
-    background-color: var(--background-color);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-    width: 14px;
-    height: 14px;
-}
-  
-::-webkit-scrollbar-button {
-    display: none;
-    width: 0;
-    height: 0;
-}
-  
-::-webkit-scrollbar-corner {
-    background-color: transparent;
-}
-  
-::-webkit-scrollbar-thumb {
-    background-color: var(--text-dark-color);
-}
-  
-::-webkit-scrollbar-thumb,
-::-webkit-scrollbar-track {
-    border: 4px solid transparent;
-    background-clip: padding-box;
+:root {
+    --text-dark-color: #222221;
+    --brand-primary-color: #5A2DBB;
+    --brand-secondary-color: #F45B69;
+    --link-color: rgb(69, 21, 97);
+    --background-color: #9A94BC;
+	--fonts:  'Work Sans', sans-serif;
 }
 
 /* font styles */
@@ -154,26 +71,14 @@ a {
 	color: var(--text-dark-color);
 }
 
-:root {
-    --text-dark-color: #222221;
-    --brand-primary-color: #5A2DBB;
-    --brand-secondary-color: #F45B69;
-    --link-color: rgb(69, 21, 97);
-    --background-color: #9A94BC;
-	--fonts:  Helvetica, Arial, sans-serif;
-}
-
 body {
 	background-color: var(--background-color);
-}
-
-video {
-	object-fit: cover;
-	width: 100vw;
-	height: 100vh;
-	position: absolute;
-	top: 0;
-	left: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 
 .viewport-header {
@@ -214,359 +119,6 @@ video {
 	}
 	100% {
 	  opacity: 1;
-	}
-}
-
-/* Style the navbar */
-#navbar {
-	overflow: hidden;
-	background-color: var(--brand-primary-color);
-	z-index: 1;
-}
- 
-li {
-	float: left;
-}
-  
-li a {
-	display: block;
-	color: #666;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-  
-li a:hover:not(.active) {
-	background-color: #ddd;
-}
-  
-li a.active {
-	color: white;
-	background-color: #4caf50;
-}
-
-/* Page content */
-.content {
-	padding: 16px;
-}
-  
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
-	position: fixed;
-	top: 0;
-	width: 100%;
-}
-  
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
-	padding-top: 60px;
-}
-main {
-	justify-content: center;
-	align-content: center;
-	margin-left: 20%;
-	margin-right: 50%;
-}
-.gallery {
-	display: inline-grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 0;
-
-}
-
-.displaycard {
-	position: relative;
-    border: 2px solid var(--text-dark-color);
-	width: 20rem;
-	height: 20rem;
-    display: inline-flex;
-    align-items: center;
-    margin: 0.5rem;
-    background-color: #dbd4d4;
-}
-
-.displaycard img {
-	opacity: 1;
-	object-fit: fill;
-	overflow: hidden;
-}
-
-.displaycard:hover img{
-	animation: fade-out ease 1s;
-	animation-fill-mode: forwards;
-}
-
-.displaycard-text {
-	text-align: center;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-	display: none;
-}
-
-.displaycard:hover .displaycard-text {
-	display: block;
-	animation: fade-in ease 1s;
-	animation-fill-mode: forwards;
-}
-
-.banner {
-    width: 20rem;
-    background: linear-gradient(to right, var(--brand-primary-color), var(--background-color));    
-    height: 0.5rem;
-    position: relative;
-    bottom: 3em;
-	display: block;
-}
-
-.about {
-	background-image: url(./images/about.png);
-	background-color: #cccccc;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	position: relative;
-}
-
-/*scrolling containers */
-.container {
-	margin: 0 auto;
-}
-
-.scroll-container {
-	height: 100vh;
-	min-height: 450px;
-	padding: 2rem 1rem;
-	display: flex;
-	align-items: center;
-	box-sizing: border-box;
-}
-
-.scroll-container:nth-of-type(1) {
-	background-color: #bdd0c4;
-}
-.scroll-container:nth-of-type(2) {
-	background-color: #f5d2d3;
-}
-.scroll-container:nth-of-type(3) {
-	background-color: #9ab7d3;
-}
-.scroll-container:nth-of-type(4) {
-	background-color: #dfccf1;
-}
-
-.scroll-container:nth-of-type(even) {
-	flex-direction: row-reverse;
-}
-
-.scroll-element,
-.scroll-caption {
-	width: 50%;
-}
-
-.scroll-element {
-	min-height: 300px;
-	height: 100%;
-	background-color: #eaeaea;
-}
-
-.scroll-caption {
-	margin: 1rem;
-}
-@media screen and (max-width: 650px) {
-	.scroll-container,
-	.scroll-container:nth-of-type(even) {
-		flex-direction: column;
-		align-content: inherit;
-	}
-
-	.scroll-element {
-		height: 100%;
-	}
-
-	.scroll-element,
-	.scroll-caption {
-		width: 100%;
-	}
-}
-
-/* Button Styles */
-.button {
-	margin: auto;
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
-	font-size: 0.75rem;
-	padding: 0 0.5rem;
-	font-weight: 600;
-	text-transform: uppercase;
-	letter-spacing: 0.125rem;
-	width: 8rem;
-	height: 2rem;
-	transition: background-color 0.3s ease-in-out;
-	margin-bottom: 1em;
-	border-radius: 15px;
-}
-
-.button:hover {
-	background-color: #bdd0c4;
-	cursor: pointer;
-}
-
-.button.small {
-	padding: 0 0.5rem;
-	font-size: 0.75rem;
-	text-transform: none;
-	letter-spacing: 0;
-	font-weight: 500;
-	width: 5.5rem;
-	height: 2rem;
-}
-
-.button.icon {
-	justify-content: space-between;
-}
-
-.primary {
-	background-color: var(--text-dark-color);
-	color: white;
-}
-
-.secondary {
-	border: 2px solid var(--brand-primary-color);
-	background-color: var(--brand-primary-color);
-
-}
-
-.button.text {
-	color: var(--text-dark-color);
-	width: 6rem;
-}
-
-a.text:hover,
-a.text:focus,
-a.text:active,
-.text.hover,
-.text.active {
-	background-color: rgba(224, 127, 0, 0.5);
-}
-
-a.primary:hover,
-a.primary:focus,
-a.primary:active,
-.primary.hover,
-.primary.active {
-	background-color: #111111;
-}
-
-.disabled {
-	opacity: 0.5;
-}
-
-a.secondary:hover,
-a.secondary:focus,
-a.secondary:active,
-.secondary.hover,
-.secondary.active {
-	background-color: rgba(0, 0, 0, 0.3);
-}
-
-
-.hover {
-	background-color: #ff9c46;
-}
-
-/**Styling scrollable elements*/
-.js-scroll {
-	opacity: 0;
-	transition: opacity 500ms;
-}
-
-.js-scroll.scrolled {
-	opacity: 1;
-}
-
-.scrolled.fade-in {
-	animation: fade-in 1s ease-in-out both;
-}
-
-.scrolled.fade-in-bottom {
-	animation: fade-in-bottom 1s ease-in-out both;
-}
-
-.scrolled.slide-left {
-	animation: slide-in-left 1s ease-in-out both;
-}
-
-.scrolled.slide-right {
-	animation: slide-in-right 1s ease-in-out both;
-}
-
-/* ----------------------------------------------
- * Generated by Animista on 2021-2-11 23:32:31
- * Licensed under FreeBSD License.
- * See http://animista.net/license for more info. 
- * w: http://animista.net, t: @cssanimista
- * ---------------------------------------------- */
-
-@keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in-bottom {
-  0% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fade-out {
-	0% {
-	  opacity: 1;
-	}
-	100% {
-	  opacity: 0;
 	}
 }
 
@@ -701,4 +253,56 @@ a.secondary:active,
   65% { transform: translateY(-4px) rotate(5deg) }
   75% { transform: translateY(-4px) rotate(-5deg) }
   100% { transform: translateY(0) rotate(0) }
+}
+
+/* Style the navbar */
+#navbar ul {
+	overflow: hidden;
+	background-color: var(--brand-primary-color);
+	z-index: 1;
+	font-family: var(--fonts);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	justify-content: center;
+}
+ 
+li {
+	float: left;
+
+}
+  
+li a {
+	display: block;
+	color: #666;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+  
+li a:hover:not(.active) {
+	background-color: #ddd;
+}
+  
+li a.active {
+	color: white;
+	background-color: #4caf50;
+}
+
+/* Page content */
+.content {
+	padding: 16px;
+}
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+  
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+	padding-top: 60px;
 }
