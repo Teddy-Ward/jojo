@@ -274,19 +274,19 @@ li {
   
 li a {
 	display: block;
-	color: #666;
+	color: white;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
 }
   
 li a:hover:not(.active) {
-	background-color: #ddd;
+	background-color: var(--brand-secondary-color);
 }
   
 li a.active {
 	color: white;
-	background-color: #4caf50;
+	background-color: var(--background-color);
 }
 
 /*navbar: Page content*/
