@@ -9,7 +9,7 @@
 	--fonts:  'Work Sans', sans-serif;
 }
 
-/* font styles */
+/*font styles*/
 header {
 	font-family: var(--fonts);
 }
@@ -33,7 +33,7 @@ h2 {
 }
   
 h3 {
-	color: var(--brand-primary-color);
+	color: white;
 	text-transform: uppercase;
     font-weight: 550;
     font-size: 1.5rem;
@@ -90,9 +90,10 @@ body {
 	align-items: center;
 	justify-content: center;
 	color: white;
+	background-color: var(--brand-primary-color);
 }
 
-/*fades for main welcome*/
+/*fades for title*/
 .fade-out-title {
 	animation: fadeOutTitle ease 5s;
 	animation-fill-mode: forwards;
@@ -122,11 +123,10 @@ body {
 	}
 }
 
-/* logo animation */
+/*logo animation*/
 .word {
 	font-family: var(--fonts);
 	perspective: 1000px;
-
 }
 
 .word span {
@@ -255,7 +255,7 @@ body {
   100% { transform: translateY(0) rotate(0) }
 }
 
-/* Style the navbar */
+/*navbar Style */
 #navbar ul {
 	overflow: hidden;
 	background-color: var(--brand-primary-color);
@@ -270,7 +270,6 @@ body {
  
 li {
 	float: left;
-
 }
   
 li a {
@@ -290,19 +289,59 @@ li a.active {
 	background-color: #4caf50;
 }
 
-/* Page content */
+/*navbar: Page content*/
 .content {
 	padding: 16px;
 }
   
-  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  /*navbar: The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
 	position: fixed;
 	top: 0;
 	width: 100%;
 }
   
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+/*navbar: Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
   .sticky + .content {
 	padding-top: 60px;
+}
+
+/*Button Styles*/
+.button {
+	margin: auto;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-size: 0.75rem;
+	padding: 0 0.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.125rem;
+	width: 8rem;
+	height: 2rem;
+	transition: background-color 0.3s ease-in-out;
+	margin-bottom: 1em;
+	border-radius: 15px;
+}
+
+.button:hover {
+	background-color: var(--brand-secondary-color);
+	cursor: pointer;
+}
+
+
+.primary {
+	background-color: var(--background-color);
+}
+
+.secondary {
+	border: 2px solid var(--brand-primary-color);
+	background-color: var(--brand-primary-color);
+
+}
+
+.button a {
+	color:#ddd;
 }
