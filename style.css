@@ -178,6 +178,11 @@ body {
 	}
 }
 
+.word span:nth-child(1).active {
+	animation: falling 2s ease-out;
+	transform-origin: bottom center;
+}
+
 .word span:nth-child(3).active {
 	animation: falling 2s ease-out;
 	transform-origin: bottom center;
@@ -228,9 +233,9 @@ body {
 	}
 }
 
-.word span:nth-child(1).active {
+/*.word span:nth-child(1).active {
 	animation: toplong 1.5s linear;
-}
+}*/
 
 @keyframes toplong {
 	10%, 40% {
