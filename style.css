@@ -26,11 +26,14 @@ h1 {
 }
   
 h2 {
+	font-family: var(--fonts);
+	color: var(--brand-primary-color);
+	text-transform: uppercase;
 	padding-top: 1rem;
     font-weight: 700;
     font-size: 2rem;
     line-height: 1.75;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
   
 h3 {
@@ -64,6 +67,7 @@ h6 {
 p {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+	font-family: var(--fonts);
 }
   
 a {
@@ -501,20 +505,22 @@ li a.active {
 
 /*about me box*/ 
 .box-container {
-	direction: rtl;
+	direction: ltr;
 	background-color: white;
 	height: 350px;
 	padding-left: 50px;
 	max-width: 1200px;
 	box-shadow: 5px 10px;
+	overflow: hidden;
+	text-overflow: ellipsis; 
 }
 .box-img {
 	float: right;
 	width: 350px;
 	height: 350px;
 	background: blue;
-	clip-path: polygon(75% 0, 100% 0, 100% 100%, 0% 100%);
-	shape-outside: polygon(75% 0, 100% 0, 100% 100%, 0% 100%);
+	clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
+	shape-outside: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
 	margin-left: 50px;
 }
   
