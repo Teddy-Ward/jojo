@@ -505,6 +505,16 @@ li a.active {
 
 /*about me box*/ 
 .box-container {
+	height: 100vh;
+	min-height: 450px;
+	padding: 2rem 1rem;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: center;
+}
+
+.box {
 	direction: ltr;
 	background-color: white;
 	height: 350px;
@@ -513,6 +523,7 @@ li a.active {
 	box-shadow: 5px 10px;
 	overflow: hidden;
 	text-overflow: ellipsis; 
+	margin-bottom: 100px;
 }
 .box-img {
 	float: right;
