@@ -365,6 +365,7 @@ li a.active {
 	display: flex;
 	align-items: center;
 	box-sizing: border-box;
+	justify-content: center;
 }
 
 .scroll-container:nth-of-type(4n+0) {
@@ -496,4 +497,28 @@ li a.active {
 	100% {
 	  opacity: 0;
 	}
+}
+
+/*about me box*/ 
+.box-container {
+	direction: rtl;
+	background-color: white;
+	height: 350px;
+	padding-left: 50px;
+	max-width: 1200px;
+	box-shadow: 5px 10px;
+}
+.box-img {
+	float: right;
+	width: 350px;
+	height: 350px;
+	background: blue;
+	clip-path: polygon(75% 0, 100% 0, 100% 100%, 0% 100%);
+	shape-outside: polygon(75% 0, 100% 0, 100% 100%, 0% 100%);
+	margin-left: 50px;
+}
+  
+.box-img img {
+	max-height: 400px;
+	max-width: 400px;
 }
