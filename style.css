@@ -519,7 +519,7 @@ li a.active {
 	height: 550px;
 	padding-left: 50px;
 	max-width: 1200px;
-	box-shadow: 5px 10px;
+	box-shadow: 5px 10px var(--brand-primary-color);
 	overflow: hidden;
 	text-overflow: ellipsis; 
 	margin-bottom: 100px;
@@ -528,7 +528,7 @@ li a.active {
 	float: right;
 	width: 550px;
 	height: 550px;
-	background: blue;
+	background: var(--brand-primary-color);
 	clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
 	shape-outside: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
 	margin-left: 50px;
@@ -544,7 +544,7 @@ li a.active {
 	height: 70%;
 	padding-left: 5%;
 	padding-right: 50px;
-	box-shadow: 5px 10px;
+	box-shadow: 5px 10px var(--brand-primary-color);
 	overflow: hidden;
 	text-overflow: ellipsis; 
 	margin-bottom: 100px;
@@ -559,5 +559,14 @@ li a.active {
 }
 
 .imageGallery1 img{
-	padding-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	box-sizing: border-box;
+	position: relative;
+
+}
+.imageGallery1 img:hover{
+    outline: 2px solid var(--brand-primary-color);
+	outline-offset: -2px;
+    top: -0.5rem;
 }
