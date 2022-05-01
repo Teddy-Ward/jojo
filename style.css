@@ -538,3 +538,26 @@ li a.active {
 	max-height: 550px;
 	max-width: 550px;
 }
+.box-gallery {
+	background-color: white;
+	width: 70%;
+	height: 70%;
+	padding-left: 5%;
+	padding-right: 50px;
+	box-shadow: 5px 10px;
+	overflow: hidden;
+	text-overflow: ellipsis; 
+	margin-bottom: 100px;
+}
+
+.imageGallery1 {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.imageGallery1 img{
+	padding-left: 10px;
+}

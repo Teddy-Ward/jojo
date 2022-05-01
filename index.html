@@ -3,6 +3,9 @@
     <head>
         <title>JoJoModjo Graphic Design</title>
         <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="simpleLightbox.css">
+        <script src="simpleLightbox.js"></script>
+
     </head>
     <body>
         <!--welcome header-->
@@ -71,13 +74,17 @@
                     comicstrips & designs for MC machinery
                 </p>              
             </div>
-
         </section>
-        <section id="portfolio" class="scroll-container container">
-            <div class="scroll-element js-scroll fade-in-bottom">
-            </div>
-            <div class="scroll-caption">
-              This animation slides in to the top.
+        <section id="portfolio" class="box-container container">
+            <div class="box-gallery">        
+                <h2>Examples</h2>
+                    <div class="imageGallery1">
+                    <a href="images/6big.jpg" title="Caption for gallery item 3"><img src="images/6small.jpg" alt="Gallery image 3" /></a>
+                    <a href="images/4big.jpg" title="Caption for gallery item 1"><img src="images/4small.jpg" alt="Gallery image 1" /></a>
+                    <a href="images/5big.jpg" title="Caption for gallery item 2"><img src="images/5small.jpg" alt="Gallery image 2" /></a>
+                    <a href="images/6big.jpg" title="Caption for gallery item 3"><img src="images/6small.jpg" alt="Gallery image 3" /></a>
+                    <a href="images/jojo.png" title="Caption for gallery item 3"><img src="images/6small.jpg" alt="Gallery image 3" /></a>
+                </div>
             </div>
         </section>
         <section id="partners" class="scroll-container container">
@@ -108,6 +115,13 @@
               This animation fades in.
             </div>
         </section>
+        <script>
+
+            new SimpleLightbox({elements: '.imageGallery1 a'});
+        
+            // or if using jQuery
+            // $('.imageGallery1 a').simpleLightbox();
+        </script>
         <!--footer-->
         <footer>
             <h5>Designed by ©Ted Ward</h5>
