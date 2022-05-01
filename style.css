@@ -363,7 +363,7 @@ li a.active {
 }
 
 .scroll-container {
-	height: 100vh;
+	height: 110vh;
 	min-height: 450px;
 	padding: 2rem 1rem;
 	display: flex;
@@ -372,20 +372,20 @@ li a.active {
 	justify-content: center;
 }
 
-.scroll-container:nth-of-type(4n+0) {
+.container:nth-of-type(4n+0) {
 	background-color: #bdd0c4;
 }
-.scroll-container:nth-of-type(4n+1) {
+.container:nth-of-type(4n+1) {
 	background-color: #f5d2d3;
 }
-.scroll-container:nth-of-type(4n+2) {
+.container:nth-of-type(4n+2) {
 	background-color: #9ab7d3;
 }
-.scroll-container:nth-of-type(4n+3) {
+.container:nth-of-type(4n+3) {
 	background-color: #dfccf1;
 }
 
-.scroll-container:nth-of-type(even) {
+.container:nth-of-type(even) {
 	flex-direction: row-reverse;
 }
 
@@ -398,14 +398,16 @@ li a.active {
 	min-height: 300px;
 	height: 100%;
 	background-color: #eaeaea;
+	box-shadow: 5px 10px var(--brand-primary-color)
 }
 
 .scroll-caption {
 	margin: 1rem;
+	text-align: center;
 }
 @media screen and (max-width: 650px) {
 	.scroll-container,
-	.scroll-container:nth-of-type(even) {
+	.container:nth-of-type(even) {
 		flex-direction: column;
 		align-content: inherit;
 	}
@@ -417,6 +419,9 @@ li a.active {
 	.scroll-element,
 	.scroll-caption {
 		width: 100%;
+	}
+	.scroll-caption {
+		text-align: justify;
 	}
 }
 
@@ -505,7 +510,7 @@ li a.active {
 
 /*about me box*/ 
 .box-container {
-	height: 100vh;
+	height: 110vh;
 	min-height: 600px;
 	padding: 2rem 1rem;
 	display: flex;
