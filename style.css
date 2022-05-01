@@ -554,7 +554,8 @@ li a.active {
 .box-gallery {
 	background-color: white;
 	width: 70%;
-	height: 70%;
+	min-height: 70%;
+	height: auto;
 	padding-left: 5%;
 	padding-right: 50px;
 	box-shadow: 5px 10px var(--brand-primary-color);
@@ -563,6 +564,12 @@ li a.active {
 	margin-bottom: 100px;
 }
 
+@media screen and (max-width: 650px) {
+	.box-container {
+		height: auto;
+	
+	}
+}
 .imageGallery1 {
 	display: flex;
 	align-items: center;
