@@ -46,6 +46,9 @@ h3 {
 }
   
 h4 {
+	color: var(--brand-primary-color);
+	font-family: var(--fonts);
+	text-transform: uppercase;
     font-weight: 550;
     font-size: 1.25rem;
     line-height: 1.2;
@@ -266,7 +269,7 @@ body {
 }
 
 /*navbar Style */
-#navbar ul {
+.nav ul {
 	overflow: hidden;
 	background-color: var(--brand-primary-color);
 	z-index: 1;
@@ -278,23 +281,24 @@ body {
 	justify-content: center;
 }
  
-li {
+.nav li {
 	float: left;
 }
   
-li a {
-	display: block;
+.nav li a {
 	color: var(--text-light-color);
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	float: left;
 }
   
-li a:hover:not(.active) {
+.nav li a:hover:not(.active) {
 	background-color: var(--brand-secondary-color);
+	
 }
   
-li a.active {
+.nav li a.active {
 	color: var(--text-light-color);
 	background-color: var(--background-color);
 }
@@ -404,33 +408,10 @@ li a.active {
 	padding-top: 50px;
 }
 
-.scroll-element img {
-	width:  200px;
-	height: 200px;
-}
 
 .scroll-caption {
 	margin: 1rem;
 	text-align: center;
-}
-@media screen and (max-width: 650px) {
-	.scroll-container,
-	.container:nth-of-type(even) {
-		flex-direction: column;
-		align-content: inherit;
-	}
-
-	.scroll-element {
-		height: 100%;
-	}
-
-	.scroll-element,
-	.scroll-caption {
-		width: 100%;
-	}
-	.scroll-caption {
-		text-align: justify;
-	}
 }
 
 /**Styling scrollable elements*/
@@ -551,6 +532,8 @@ li a.active {
 	max-height: 550px;
 	max-width: 550px;
 }
+
+/*portfolio gallery */
 .box-gallery {
 	background-color: white;
 	width: 70%;
@@ -564,12 +547,6 @@ li a.active {
 	margin-bottom: 100px;
 }
 
-@media screen and (max-width: 650px) {
-	.box-container {
-		height: auto;
-	
-	}
-}
 .imageGallery1 {
 	display: flex;
 	align-items: center;
@@ -589,4 +566,41 @@ li a.active {
     outline: 2px solid var(--brand-primary-color);
 	outline-offset: -2px;
     top: -0.5rem;
+}
+
+/*partners area*/
+.partners {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+.partners img {
+	width:  200px;
+	height: 200px;
+}
+
+
+/*smaller screens */
+@media screen and (max-width: 650px) {
+	.scroll-container,
+	.container:nth-of-type(even) {
+		flex-direction: column;
+		align-content: inherit;
+	}
+
+	.scroll-element {
+		height: 100%;
+	}
+
+	.scroll-element,
+	.scroll-caption {
+		width: 100%;
+	}
+	.scroll-caption {
+		text-align: justify;
+	}
+	.box-container {
+		height: auto;
+	
+	}
 }
