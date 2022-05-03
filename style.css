@@ -598,6 +598,7 @@ body {
 	padding: 0;
 	list-style-type: none;
 	font-family: var(--fonts);
+	z-index: 0;
 }
   
 .card {
@@ -657,7 +658,6 @@ body {
 	background-color: var(--surface-color);
 	transform: translateY(-100%);
 	transition: 0.2s ease-in-out;
-
 }
   
 .card__arc {
@@ -685,7 +685,7 @@ body {
 	border-radius: 50%;
 }
   
-  .card__title {
+.card__title {
 	font-size: 1em;
 	margin: 0 0 0.3em;
 	color: var(--brand-primary-color);
