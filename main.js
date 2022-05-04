@@ -131,7 +131,7 @@ spans.forEach((span, idx) => {
 });
 
 
-//respons
+//responsive nav
 var tglbtn = document.getElementById("nav-toggle");
 var navlst = document.getElementById("nav-list")
 
