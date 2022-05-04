@@ -129,3 +129,10 @@ spans.forEach((span, idx) => {
 		span.classList.add('active');
 	}, 300 * (idx+10))
 });
+
+
+
+var tglbtn = document.getElementById("nav-toggle");
+var navlst = document.getElementById("nav-list")
+
+tglbtn.addEventListener('click', () => {navlst.classList.toggle("active");});

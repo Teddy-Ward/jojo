@@ -269,16 +269,19 @@ body {
 }
 
 /*navbar Style */
-.nav ul {
+.nav {
 	overflow: hidden;
 	background-color: var(--brand-primary-color);
 	z-index: 1;
 	font-family: var(--fonts);
+	display: flex;
+	justify-content: center;
+}
+
+.nav ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
-	display: flex;
-	justify-content: center;
 }
  
 .nav li {
@@ -303,12 +306,70 @@ body {
 	background-color: var(--background-color);
 }
 
+.menu-icon {
+    display: none;
+}
+
+.bar {
+    width: 20px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 100%;
+}
+.logo-container {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+		position: sticky;
+    }
+
+    .nav-menu a{
+        width: 100%;
+    }
+
+    .menu-item {
+        display: block;
+        width: 100%;
+        padding: 5px 0;
+        text-align: end;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 5%;
+    }
+
+    .menu-icon:hover .bar {
+        background-color: darkcyan;
+    }
+	.nav-menu {
+        display: none;
+        width: 100%;
+    }
+    
+    .active {
+        display: block;
+    }
+	.logo-container {
+		display: block;
+		height: 48px
+	}
+}
+
+
+
+
 /*navbar: Page content*/
 .content {
 	padding: 16px;
 }
   
-  /*navbar: The sticky class is added to the navbar with JS when it reaches its scroll position */
+/*navbar: The sticky class is added to the navbar with JS when it reaches its scroll position */
 .sticky {
 	position: fixed;
 	top: 0;
