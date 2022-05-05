@@ -858,6 +858,20 @@ ul.cloud span:hover {
 	max-width: 800px;
 }
 
+/*footer style */
+footer {
+	font-family: var(--fonts);
+	color: var(--brand-primary-color);
+	float: right;
+	padding-right: 5%;
+	margin-bottom: 10px;
+	height: 30px;
+}
+
+footer h5 {
+	font-size: 10px;
+}
+
 /*smaller screens (some included in nav section)*/
 @media screen and (max-width: 768px) {
 	.scroll-container,
