@@ -383,7 +383,7 @@ body {
 }
 
 /*Button Styles*/
-.button {
+.contact-form input[type=submit], .button {
 	margin: auto;
 	display: flex;
 	flex-flow: row nowrap;
@@ -402,23 +402,23 @@ body {
 	border-radius: 15px;
 }
 
-.button:hover {
+.contact-form input[type=submit]:hover, .button:hover {
 	background-color: var(--brand-secondary-color);
 	cursor: pointer;
 }
 
 
-.primary {
+.contact-form input[type=submit], .primary {
 	background-color: var(--background-color);
 }
 
-.secondary {
+.contact-form input[type=submit], .secondary {
 	border: 2px solid var(--brand-primary-color);
 	background-color: var(--brand-primary-color);
 
 }
 
-.button a {
+.contact-form input[type=submit], .button a {
 	color: var(--text-light-color);
 }
 
@@ -846,6 +846,7 @@ ul.cloud span:hover {
 .contact-form input[type=text] { 
 	min-width: 300px;
 	width: 70%;
+	max-width: 800px;
 }
   
 .contact-form textarea {
@@ -853,6 +854,7 @@ ul.cloud span:hover {
 	width: 70%;
 	min-height: 400px;
 	height: 50%;
+	max-width: 800px;
 }
 
 /*smaller screens (some included in nav section)*/
