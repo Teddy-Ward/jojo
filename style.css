@@ -599,6 +599,7 @@ body {
 	background-color: white;
 	width: 70%;
 	min-height: 70%;
+	min-width: 400px;
 	height: auto;
 	padding-left: 5%;
 	padding-right: 50px;
@@ -879,6 +880,16 @@ ul.cloud span:hover {
 	.box-container, .scroll-container {
 		height: auto;
 		min-height: 110vh;
+	}
+	.cards {
+		grid-template-columns: repeat(2, minmax(300px, 300px));
+		grid-template-rows: repeat(auto, minmax(300px, 300px));
+	}
+}
+@media screen and (max-width: 1080px) {
+	.box-container, .scroll-container {
+		height: auto;
+		min-height: 1200px;
 	}
 	.cards {
 		grid-template-columns: repeat(2, minmax(300px, 300px));
