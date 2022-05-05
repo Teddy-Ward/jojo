@@ -145,3 +145,6 @@ $(document).click(function (e)
    navlst.classList.remove("active");
   }
 });
+
+
+
