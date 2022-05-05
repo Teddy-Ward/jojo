@@ -910,3 +910,14 @@ footer h5 {
 		grid-template-rows: repeat(auto, minmax(300px, 300px));
 	}
 }
+
+@media screen and (max-height: 1080px) {
+	.box-container, .scroll-container, .viewport-header {
+		height: auto;
+		min-height: 1200px;
+	}
+	.cards {
+		grid-template-columns: repeat(2, minmax(300px, 300px));
+		grid-template-rows: repeat(auto, minmax(300px, 300px));
+	}
+}
