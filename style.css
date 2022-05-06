@@ -447,6 +447,7 @@ body {
 	align-items: center;
 	box-sizing: border-box;
 	justify-content: center;
+	min-width: 800px;
 }
 
 .container:nth-of-type(4n+0) {

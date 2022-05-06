@@ -148,3 +148,12 @@ $(document).click(function (e)
 
 
 
+
+$(document).ready(function () {
+  if(window.location.href.indexOf("success") > -1) {
+    document.querySelectorAll('.error')[0].style.display = 'none';
+ }
+ else {
+  document.querySelectorAll('.success')[0].style.display = 'none';
+ }
+});
